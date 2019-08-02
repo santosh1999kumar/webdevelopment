@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+   
+</head>
+<body>
+    
+   <table table align="center">
+	 	<tr>
+    		<th><h2>ID</h2></th>
+    		<th><h2>Name</h2></th>
+    		<th><h2>Surname</h2></th>
+    		<th><h2>Roll Number</h2></th>
+    		<th><h2>Mobile Number</h2></th>
+    		<th><h2>Branch</h2></th>
+    	</tr>
+    	{% for r in register %}
+    	<tr>
+    		<td><h3>{{r.id}}</h3></td>
+    		<td><h3>{{r.name}}</h3></td>
+    		<td><h3>{{r.surname}}</h3></td>
+    		<td><h3>{{r.roll_no}}</h3></td>
+    		<td><h3>{{r.mobile}}</h3></td>
+    		<td><h3>{{r.branch}}</h3></td>
+    		<td><a href="{{url_for('editData',register_id=r.id)}}">
+    		Edit</a></td>
+    		<td><a href="{{url_for('deleteData',register_id=r.id)}}">
+    		delete</a></td>
+    	</tr>
+    	{% endfor %}
+     </table>
+     <br><br><br>
+     <a href="{{url_for('addData')}}">Add</a>
+
+</body>
+</html>                                                                

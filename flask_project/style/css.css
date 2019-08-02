@@ -1,0 +1,12 @@
+body{
+	background:#9966ff;
+}
+.container{
+	background: pink;
+	width: 50%;
+	margin: 20%;
+	padding: 2%;
+	padding-right: 2%;
+	border-radius: 5%;
+	box-shadow: 4px 4px 4px 4px;
+}
